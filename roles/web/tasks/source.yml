@@ -1,0 +1,8 @@
+---
+- name: Clone git repo
+  git:
+    repo: git@github.com:rysev-a/youdo.git
+    dest: /home/alex/www/test
+    version: master
+    accept_hostkey: yes
+    key_file: /home/alex/.ssh/id_rsa

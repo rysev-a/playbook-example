@@ -1,0 +1,9 @@
+---
+- name: Configure supervisor file
+  template: src=templates/youdo.conf dest=/etc/supervisor/conf.d/youdo.conf
+- name: Reread supervisor app configuration
+  command: supervisorctl reread
+- name: Restart supervisor
+  supervisorctl:
+    name: youdo
+    state: restarted

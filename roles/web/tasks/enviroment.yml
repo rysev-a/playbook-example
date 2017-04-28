@@ -1,0 +1,6 @@
+---
+  - name: Install requirements
+    pip: 
+      requirements: /home/alex/www/test/server/requirements.txt
+      virtualenv: /home/alex/www/test/penv
+      virtualenv_python: python3.4
